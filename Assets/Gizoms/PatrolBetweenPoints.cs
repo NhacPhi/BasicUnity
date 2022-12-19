@@ -5,6 +5,8 @@ using UnityEngine;
 public class PatrolBetweenPoints : MonoBehaviour
 {
     [SerializeField]
+    private Color color;
+    [SerializeField]
     private Transform[] patrolPoints;
     // Start is called before the first frame update
 
@@ -17,7 +19,7 @@ public class PatrolBetweenPoints : MonoBehaviour
 
     void DrawPoints()
     {
-        Gizmos.color = Color.yellow;
+        Gizmos.color = color;
 
         foreach (Transform point in patrolPoints)
         {
@@ -28,7 +30,7 @@ public class PatrolBetweenPoints : MonoBehaviour
 
     void DrawPaths()
     {
-        Gizmos.color = Color.yellow;
+        Gizmos.color = color;
 
         for(int i = 0; i < patrolPoints.Length - 1; i++)
         {

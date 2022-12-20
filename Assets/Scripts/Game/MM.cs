@@ -12,6 +12,9 @@ public class MM : MonoBehaviour
     private string _name;
     public string Name => _name;
 
+    [SerializeField]
+    private ShapeData shapeData;
+
     int Add(int x, int y)
     {
         return x + y;
@@ -32,7 +35,7 @@ public class MM : MonoBehaviour
 
         //int amout = delegateCa.Invoke(1, 2);
 
-
+        Debug.Log("Columns shapeData : " + shapeData.Columns);
     }
 
     // Update is called once per frame
